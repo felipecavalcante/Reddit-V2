@@ -1,4 +1,4 @@
-package com.example.redditv2.presenter
+package com.example.redditv2.app.sample.presenter
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

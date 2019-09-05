@@ -1,7 +1,7 @@
-package com.example.redditv2.data
+package com.example.redditv2.app.sample.data
 
-import com.example.redditv2.data.service.RedditService
-import com.example.redditv2.domain.RedditApi
+import com.example.redditv2.app.sample.data.service.RedditService
+import com.example.redditv2.app.sample.domain.RedditApi
 import io.reactivex.Single
 import javax.inject.Inject
 

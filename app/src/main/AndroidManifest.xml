@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presenter.RedditActivity">
+        <activity android:name="com.example.redditv2.app.sample.presenter.RedditActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

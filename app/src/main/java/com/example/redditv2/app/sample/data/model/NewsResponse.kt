@@ -1,6 +1,6 @@
-package com.example.redditv2.data.model
+package com.example.redditv2.app.sample.data.model
 
-import com.example.redditv2.domain.News
+import com.example.redditv2.app.sample.domain.News
 
 data class NewsResponse(
     var id: String,

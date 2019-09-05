@@ -1,4 +1,4 @@
-package com.example.redditv2.domain
+package com.example.redditv2.app.sample.domain
 
 data class News(
     var id: String,
