@@ -1,6 +1,7 @@
 package com.example.redditv2.app.base.annotation
 
 /*code by https://github.com/douglasiacovelli/Dagger-Android-POC*/
+
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import dagger.Binds

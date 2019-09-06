@@ -1,6 +1,7 @@
 package com.example.redditv2.app.base.di
 
 import android.app.Application
+import com.example.redditv2.app.base.MyApplication
 import com.example.redditv2.app.base.annotation.ViewModelModule
 import dagger.BindsInstance
 import dagger.Component
@@ -12,7 +13,9 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidInjectionModule::class,
-        DependencyInjection::class,
+        AppModule::class,
+        NetworkingModule::class,
+        ActivityModule::class,
         ViewModelModule::class
     ]
 )
