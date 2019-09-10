@@ -10,12 +10,9 @@ import dagger.android.HasActivityInjector
 import dagger.android.HasAndroidInjector
 import javax.inject.Inject
 
-class MyApplication : Application(), HasAndroidInjector, HasActivityInjector {
+class MyApplication : Application(), HasActivityInjector {
     @Inject
     lateinit var activityInjector: DispatchingAndroidInjector<Activity>
-
-    @Inject
-    lateinit var androidInjector: DispatchingAndroidInjector<Any>
 
     lateinit var appComponentCreator: AppComponent
 
@@ -29,6 +26,5 @@ class MyApplication : Application(), HasAndroidInjector, HasActivityInjector {
     }
     override fun activityInjector(): AndroidInjector<Activity> = activityInjector
 
-    override fun androidInjector(): AndroidInjector<Any> = androidInjector
 
 }

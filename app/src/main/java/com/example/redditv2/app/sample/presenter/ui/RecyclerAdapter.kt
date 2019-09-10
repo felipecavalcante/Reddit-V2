@@ -1,7 +1,6 @@
 package com.example.redditv2.app.sample.presenter.ui
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.redditv2.R
 import com.example.redditv2.app.sample.domain.ChildrenData
 import com.example.redditv2.app.sample.domain.News
-import com.example.redditv2.app.sample.presenter.RedditActivity
 import com.squareup.picasso.Picasso
 
 class RecyclerAdapter(private val context: Context, private val list: List<ChildrenData>) :
@@ -38,6 +36,7 @@ class RecyclerAdapter(private val context: Context, private val list: List<Child
         holder.urlInfo.text = data.url
         Picasso.get().load(data.thumbnail).into(holder.thumbnail)
 
+/*
         holder.click.setOnClickListener {
             val openCard = Intent(context, RedditActivity::class.java)
             openCard.putExtra("title", holder.title.text as String)
@@ -45,6 +44,7 @@ class RecyclerAdapter(private val context: Context, private val list: List<Child
             openCard.putExtra("url", holder.urlInfo.text as String)
             context.startActivity(openCard)
         }
+*/
 
     }
 
