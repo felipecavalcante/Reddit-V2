@@ -7,12 +7,12 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 interface IRepository {
-    fun getRedditPost( after: String): Single<RedditApi>
+    fun getRedditPost( after: String?): Single<RedditApi>
 }
 
 class RedditRepository @Inject constructor(
     private val service: RedditService
 ) : IRepository {
-    override fun getRedditPost(after: String): Single<RedditApi> =
+    override fun getRedditPost(after: String?): Single<RedditApi> =
         service.list(after).map { it.toRedditApi() }
 }

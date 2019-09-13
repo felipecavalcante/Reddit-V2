@@ -32,9 +32,11 @@ class RecyclerAdapter(private val context: Context, private val list: List<Child
         val data: News = list[position].data
         holder.title.text = data.title
         holder.author.text = data.author
-        holder.contentPost.text = data.selftext
-        holder.urlInfo.text = data.url
-        Picasso.get().load(data.thumbnail).into(holder.thumbnail)
+        if(data.thumbnail.isNullOrBlank()){
+            Picasso.get().load(data.thumbnail).resize(0,0).into(holder.thumbnail)
+        }else{
+            Picasso.get().load(data.thumbnail).resize(250,180).into(holder.thumbnail)
+        }
 
 /*
         holder.click.setOnClickListener {
@@ -52,8 +54,6 @@ class RecyclerAdapter(private val context: Context, private val list: List<Child
         val title: TextView = itemView.findViewById(R.id.lblTitle)
         val author: TextView = itemView.findViewById(R.id.lblAuthor)
         val thumbnail: ImageView = itemView.findViewById(R.id.imgCard)
-        val contentPost: TextView = itemView.findViewById(R.id.lblSelf)
-        val urlInfo: TextView = itemView.findViewById(R.id.txtUrl)
         val click: CardView = itemView.findViewById(R.id.cardView)
     }
 }
