@@ -3,14 +3,14 @@
     package="com.example.redditv2">
 
     <application
-        android:name=".app.base.MyApplication"
+        android:name="com.example.redditv2.app.app.base.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.redditv2.app.sample.presenter.RedditActivity">
+        <activity android:name="com.example.redditv2.app.app.presenter.RedditActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
